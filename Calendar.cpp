@@ -12,42 +12,34 @@ class Calendar{
 			cout<<setw(35)<<"this is "<<yy<<endl;
 			cout<<setw(38)<<"welcome! "<<endl;
 		};
-		void display(int month);//per month
-		void test(){
-		cout<<' '<<start;
-		} 
+		void display(int month);//2 months each time
 	private:
 		enum week{Sun=0,Mon,Tue,Wed,Thu,Fri,Sat};
 		int year;
-	    week start;//2019.1.1
-	    int isLeap(int year);
-	    int get_total_days_between(int  year,int begin=2019);
-	    int get_startday_of(int year);
-	    string getname(int month);
+	    	week start;//2019.1.1
+	    	int isLeap(int year);
+	    	int get_total_days_between(int  year,int begin=2019);
+	    	int get_startday_of(int year);
+	    	string getname(int month);
 		int getdays(int month);
 };
 
 int Calendar::isLeap(int year){
 	if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
         return 1;
-    else
-        return 0;
+    	else return 0;
 }
+
 int Calendar::get_total_days_between(int  year,int  begin){
 	int total=0;
-	for(int i=Min(year,begin);i<Max(year,begin);i++)
-	{
-		if(year>begin)
-		{
+	for(int i=Min(year,begin);i<Max(year,begin);i++){
+		if(year>begin){
 			if(isLeap(i)) total+=366;
 					 else total+=365;
-		}else if(year<begin)
-		{
-			
+		} else if(year<begin){
 			if(isLeap(i)) total-=366;
-				     else total-=365;
-		}else return 0;
-	
+			else total-=365;
+		} else return 0;
 	}
 	return total;
 }
@@ -91,7 +83,7 @@ void Calendar::display(int month){
 		first_date++;
 
 	}
-	//以下代码考虑到并解决了month最后一天不是Sat时month+1最后一行无法输出问题 
+	//以下代码考虑到month最后一天不是Sat时month+1最后一行无法输出问题 
 	if(second_date<=second_total){
 		cout<<setw(4*(Sat-first_startday+1))<<" ";
 		cout<<"      ";
