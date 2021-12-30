@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <string>
+#include <windows.h>
 using namespace std;
 
 int Min(int &a,int &b);
