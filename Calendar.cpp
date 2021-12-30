@@ -9,8 +9,8 @@ int Max(int &a,int &b);
 class Calendar{
 	public:
 		Calendar(int yy):year(yy),start(Tue){
-			cout<<setw(35)<<"this is "<<yy<<endl;
-			cout<<setw(38)<<"welcome! "<<endl;
+			cout<<setw(35)<<"this is "<<yy<<setw(25)<<" "<<endl;
+			cout<<setw(38)<<"welcome! "<<setw(26)<<" "<<endl;
 		};
 		void display(int month);//2 months each time
 	private:
@@ -55,8 +55,10 @@ void Calendar::display(int month){
 	int first_total=getdays(month);int second_total=getdays(month+1);
 	int first_date=1;int second_date=1;
 	int date=1;
+	string month1=getname(month);
+	string month2=getname(month+1);
 	
-	cout<<" "<<getname(month)<<setw(35)<<getname(month+1)<<endl;//Januray 1 for example
+	cout<<" "<<month1<<setw(35-month1.length())<<" "<<month2<<setw(28-month2.length())<<" "<<endl;
 	cout<<"==============================    =============================="<<endl;
 	cout<<"  Sun Mon Tue Wed Thu Fri Sat       Sun Mon Tue Wed Thu Fri Sat "<<endl;
 	
@@ -76,7 +78,7 @@ void Calendar::display(int month){
 			while(second_startday<7&&second_date<=second_total){
 				cout<<setw(4)<<second_date;second_date++;second_startday++;
 			}
-			cout<<'\n';
+			cout<<setw(2)<<" "<<endl;
 			second_startday=second_startday%7;
 		}
 		
@@ -86,11 +88,11 @@ void Calendar::display(int month){
 	//以下代码考虑到month最后一天不是Sat时month+1最后一行无法输出问题 
 	if(second_date<=second_total){
 		cout<<setw(4*(Sat-first_startday+1))<<" ";
-		cout<<"      ";
+		cout<<setw(6)<<" ";
 	}
 	while(second_startday<7&&second_date<=second_total){
 				cout<<setw(4)<<second_date;second_date++;second_startday++;
-		}
+	}
 	//以上
 	startday=second_startday;
 	cout<<endl;
@@ -140,14 +142,18 @@ int Min(int &a,int &b){
 int Max(int &a,int &b){
 	return (a>b)?a:b;
 }
-
+void SetColorAndBackground(int ForgC, int BackC){
+	WORD wColor = ((BackC & 0x0F) << 4) + (ForgC & 0x0F);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), wColor);
+}
 int main(){
+	SetColorAndBackground(4,15);
 	Calendar c(2021);
-
-		c.display(1);
-		c.display(3);
-		c.display(5);
-		c.display(7);
-		c.display(9);
-		c.display(11);
+	cin.get()
+	c.display(1);
+	c.display(3);
+	c.display(5);
+	c.display(7);
+	c.display(9);
+	c.display(11);
 }
