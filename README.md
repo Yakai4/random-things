@@ -1,6 +1,10 @@
 # random-things
 🔥新年快乐！🔥</br>
 在这个小仓库里，我会放置一些曾经写过的代码。</br>
-Calendar.cpp是一个控制台程序，可以打印<s>**任意**</s>一年的日历。快过年了，我在``清理桌面（电脑桌面）``时看到了它，修了修bug，放到这个仓库里。</br>
+>1️⃣Calendar.cpp是一个控制台程序，可以打印<s>**任意**</s>一年的日历。快过年了，我在``清理桌面（电脑桌面）``时看到了它，修了修bug，放到这个仓库里。</br>
+2️⃣PascalTriangle is a practice program in java language. also called 杨辉三角.<br>
+be interested in it when i was reading **Mathematical Discovery** by **George Pólya**</br>
+
 希望对你有所帮助。</br>
-😘😊😊😊😊😘
+😘😊😊😊😊😘</br>
+
