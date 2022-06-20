@@ -5,8 +5,10 @@
 2️⃣`PascalTriangle` is a practice program in java language. also called 杨辉三角.<br>
 be interested in it when i was reading **Mathematical Discovery** by **George Pólya**</br>
 3️⃣`LZW` and `LZ78` are common compression algorithms(for the purpose of study)</br>
-both can also be viewed in the juypter notebook below(here below is a adverb modifying a noun, trust me), including the result and one more simple video processing script using MoviePy(Thanks a lot)</br>
+both can also be viewed in the juypter notebook below([ref1](#1):here below is a adverb modifying a noun, trust me 😃), including the result and one more simple video processing script using MoviePy(Thanks a lot)</br>
 have fun :)</br>
 希望对你有所帮助。</br>
 😘😊😊😊😊😘</br>
 
+# REFERENCE
+[ref1](#1):https://dictionary.cambridge.org/grammar/british-grammar/below
