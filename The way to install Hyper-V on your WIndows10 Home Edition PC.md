@@ -1,4 +1,4 @@
-Save following code as `Hyper-V.cmd` and restart when installaton is done  
+Save the following code as `Hyper-V.cmd` and restart when installaton is done  
 ```cmd
 pushd "%~dp0"
 dir /b %SystemRoot%\servicing\Packages\*Hyper-V*.mum >hyper-v.txt
